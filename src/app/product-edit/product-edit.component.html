@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Update New Product</h2>
+
+            <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label>Product Name</label>
+                    <input type="text" class="form-control" [(ngModel)]="product.name" formControlName="name"
+                        [ngClass]="{'is-invalid': submitted && f.name.errors}" />
+                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                        <div *ngIf="f.name.errors.required"> required</div>
+                    </div>
+                    <label>Product details</label>
+                    <input type="text" class="form-control" [(ngModel)]="product.details" formControlName="details"
+                        [ngClass]="{'is-invalid': submitted && f.details.errors}" />
+                    <div *ngIf="submitted && f.details.errors" class="invalid-feedback">
+                        <div *ngIf="f.details.errors.required"> required</div>
+                    </div>
+                    <label>Product image</label>
+                    <input type="text" class="form-control" [(ngModel)]="product.image" formControlName="image"
+                        [ngClass]="{'is-invalid': submitted && f.image.errors}" />
+                    <div *ngIf="submitted && f.image.errors" class="invalid-feedback">
+                        <div *ngIf="f.image.errors.required"> required</div>
+                    </div>
+                    <label>Product price</label>
+                    <input type="text" class="form-control" [(ngModel)]="product.price" formControlName="price"
+                        [ngClass]="{'is-invalid': submitted && f.price.errors}" />
+                    <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                        <div *ngIf="f.price.errors.required"> required</div>
+                    </div>
+                    <label>Product companyId</label>
+                    <input type="text" class="form-control" [(ngModel)]="product.companyId" formControlName="companyId"
+                        [ngClass]="{'is-invalid': submitted && f.companyId.errors}" />
+                    <div *ngIf="submitted && f.companyId.errors" class="invalid-feedback">
+                        <div *ngIf="f.companyId.errors.required"> required</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-secondary" (click)="goBack()">Go Back</button> |
+                    <button class="btn btn-secondary">Update</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

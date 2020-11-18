@@ -71,6 +71,15 @@
               Confirm Password is required
             </div>
           </div>
+          <div class="">
+            <label for="admin">Admin</label>
+            <input type="checkbox" [checked]="formData.admin== true"
+                   class=""
+                   [(ngModel)] = "formData.admin"
+                   #admin = "ngModel"
+                   name="admin"
+            >
+          </div>
           <button 
           (click) = "register()"
           type="submit" 

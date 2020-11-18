@@ -12,4 +12,10 @@ router.get('/profile', authMiddleware, function (req, res) {
   res.json({ 'access': true })
 })
 
+router.get("/", user.findAll);
+router.get("/:id", user.findById);
+router.post("/", user.addUser);
+router.put("/:id", user.updateById);
+router.delete("/:id", user.removeById);
+
 module.exports = router

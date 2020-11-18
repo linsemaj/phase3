@@ -14,7 +14,7 @@ const httpOptions = {
 export class CompanyService {
 
   // URL to web api
-  private companyUrl = 'http://localhost:5000/api/companies';
+  private companyUrl = 'http://localhost:5000/companies';
   constructor(private http: HttpClient) { }
 
   getCompanies(): Observable<Company[]> {

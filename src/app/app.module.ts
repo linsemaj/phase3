@@ -18,6 +18,12 @@ import { ProductComponent } from './product/product.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserComponent } from './user/user.component';
 import { ServicesComponent } from './services/services.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { UserAddComponent } from './user-add/user-add.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
+import { ProductAddComponent } from './product-add/product-add.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +37,13 @@ import { ServicesComponent } from './services/services.component';
     CompanyEditComponent,
     ProductComponent,
     UserComponent,
-    ServicesComponent
+    ServicesComponent,
+    UserDetailComponent,
+    UserAddComponent,
+    UserEditComponent,
+    ProductAddComponent,
+    ProductEditComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

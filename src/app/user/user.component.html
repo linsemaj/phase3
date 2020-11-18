@@ -4,17 +4,21 @@
         <thead>
             <tr>
                 <th>S.No.</th>
-                <th>Company Name</th>
+                <th>User Name</th>
+                <th>Email</th>
+                <th>Admin rights</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let user of users;let rowIndex=index">
                 <td>{{rowIndex+1}}</td>
-                <td>{{company.name}}</td>
-                <a class="btn btn-secondary" [routerLink]="['/user-detail', user._id]">View Details</a>
+                <td>{{user.username}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.admin}}</td>
+                <a class="btn btn-secondary" [routerLink]="['/users-detail', user._id]">View Details</a>
             </tr>
         </tbody>
     </table>
-    <a routerLink='/user-add' class="btn btn-secondary">Add Admin</a>
+    <a routerLink='/users-add' class="btn btn-secondary">Add Admin</a>
 </div>

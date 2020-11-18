@@ -46,7 +46,7 @@ export class CompanyEditComponent implements OnInit {
       console.log(this.company)
       this.companyService.updateCompanyById(this.company, this.id).subscribe(result => {
         console.log("Company Updated Successfully.");
-        this.router.navigate(["/companies"]);
+        this.router.navigate(["/companies-list"]);
       }, (err) => { console.log(err) })
     }
   }

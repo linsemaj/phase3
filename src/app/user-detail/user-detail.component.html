@@ -1,0 +1,15 @@
+<div class="card text-center">
+    <div class="card-header">
+        {{user.username}}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">User's Name: {{user.username}}</h5>
+        <h5 class="card-title">User email: {{user.email}}</h5>
+        <h5 class="card-title">User is admin: {{user.admin}}</h5>
+    </div>
+    <div class="card-footer text-muted">
+        <button class="btn btn-secondary" (click)="goBack()">Go Back</button> |
+        <a class="btn btn-secondary" [routerLink]="['/users-edit', user._id]">Update</a> |
+        <button class="btn btn-secondary" (click)="deleteUserById(user._id)">Delete</button>
+    </div>
+</div>
