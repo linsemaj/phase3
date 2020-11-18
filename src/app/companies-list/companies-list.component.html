@@ -1,0 +1,20 @@
+<div class="container">
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>S.No.</th>
+                <th>Company Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let company of companies;let rowIndex=index">
+                <td>{{rowIndex+1}}</td>
+                <td>{{company.name}}</td>
+                <a class="btn btn-secondary" [routerLink]="['/company-detail', company._id]">View Details</a>
+            </tr>
+        </tbody>
+    </table>
+    <a routerLink='/company-add' class="btn btn-secondary">Add Company</a>
+</div>
