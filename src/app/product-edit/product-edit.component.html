@@ -11,12 +11,6 @@
                     <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
                         <div *ngIf="f.name.errors.required"> required</div>
                     </div>
-                    <label>Product details</label>
-                    <input type="text" class="form-control" [(ngModel)]="product.details" formControlName="details"
-                        [ngClass]="{'is-invalid': submitted && f.details.errors}" />
-                    <div *ngIf="submitted && f.details.errors" class="invalid-feedback">
-                        <div *ngIf="f.details.errors.required"> required</div>
-                    </div>
                     <label>Product image</label>
                     <input type="text" class="form-control" [(ngModel)]="product.image" formControlName="image"
                         [ngClass]="{'is-invalid': submitted && f.image.errors}" />
@@ -29,12 +23,7 @@
                     <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
                         <div *ngIf="f.price.errors.required"> required</div>
                     </div>
-                    <label>Product companyId</label>
-                    <input type="text" class="form-control" [(ngModel)]="product.companyId" formControlName="companyId"
-                        [ngClass]="{'is-invalid': submitted && f.companyId.errors}" />
-                    <div *ngIf="submitted && f.companyId.errors" class="invalid-feedback">
-                        <div *ngIf="f.companyId.errors.required"> required</div>
-                    </div>
+                    
                 </div>
 
                 <div class="form-group">

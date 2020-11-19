@@ -5,7 +5,6 @@
             <tr>
                 <th>S.No.</th>
                 <th>Name</th>
-                <th>details</th>
                 <th>Image</th>
                 <th>Price</th>
             </tr>
@@ -13,11 +12,10 @@
         <tbody>
             <tr *ngFor="let product of products;let rowIndex=index">
                 <td>{{rowIndex+1}}</td>
-                <td>{{product.Name}}</td>
+                <td>{{product.name}}</td>
                 <td>{{product.image}}</td>
-                <td>{{product.admin}}</td>
                 <td>{{product.price}}</td>
-                <a class="btn btn-secondary" [routerLink]="['/products-detail', user._id]">View Details</a>
+                <a class="btn btn-secondary" [routerLink]="['/products-detail', product._id]">View Details</a>
             </tr>
         </tbody>
     </table>

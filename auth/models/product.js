@@ -2,12 +2,9 @@ var mongoose = require("mongoose");
 var ProductSchema = mongoose.Schema;
 
 var ProductSchemaRef = new ProductSchema({
-    _id: Number,
-    pname: String,
-    details: String,
+    name: String,
     image: String,
     price: Number,
-    company: { type: ProductSchema.Types.String, ref: 'Company' }
 });
 
 var ProductModel = mongoose.model("Product", ProductSchemaRef);

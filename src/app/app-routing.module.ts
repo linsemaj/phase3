@@ -19,6 +19,8 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import { ShoppingComponent } from './shopping/shopping.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -36,6 +38,9 @@ const routes: Routes = [
   { path: 'products-add', component: ProductAddComponent, canActivate: [AuthGuard] },
   { path: 'products-detail/:id', component: ProductDetailComponent, canActivate: [AuthGuard] },
   { path: 'products-edit/:id', component: ProductEditComponent, canActivate: [AuthGuard] },
+  { path: 'shopping', component: ShoppingComponent, canActivate: [AuthGuard] },
+  { path: 'cart', component: CartComponent, canActivate: [AuthGuard] },
+
   // { path: 'product-add', component: ProductAddComponent },
   // { path: 'product-detail/:id', component: ProductDetailComponent },
   // { path: 'product-edit/:id', component: ProductEditComponent },}

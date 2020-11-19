@@ -24,6 +24,8 @@ import { UserEditComponent } from './user-edit/user-edit.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ShoppingComponent } from './shopping/shopping.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     UserEditComponent,
     ProductAddComponent,
     ProductEditComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ShoppingComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

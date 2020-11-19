@@ -3,17 +3,16 @@ const bcrypt = require('bcryptjs')
 const Schema = mongoose.Schema
 
 const userSchema = new Schema({
-  name: {
+  username: {
     type: String,
     min: [4, 'Too short, min 4 characters are required'],
-    max: [32, 'Too long, max 16 characters are required']
+    max: [32, 'Too long, max 16 characters are required'],
+    required: 'Name is required',
   },
   email: {
     type: String,
     min: [4, 'Too short, min 4 characters are required'],
     max: [32, 'Too long, max 16 characters are required'],
-    lowercase: true,
-    unique: true,
     required: 'Email is required',
     match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/]
   },
@@ -29,7 +28,7 @@ const userSchema = new Schema({
     max: [32, 'Too long, max 16 characters are required']
   },
   admin:{
-    type:Boolean,
+    type:Boolean
   }
 });
 

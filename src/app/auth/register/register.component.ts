@@ -21,6 +21,7 @@ export class RegisterComponent implements OnInit {
     this.errors = [];
     this.auth.register(this.formData)
       .subscribe(() => {
+        console.log(this.formData)
         this.router.navigate(['/auth/login'], { queryParams: { registered: 'success' } });
        },
         (errorResponse) => {

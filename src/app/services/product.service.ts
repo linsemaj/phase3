@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Product} from '../models/product'
+import { Product } from '../models/product'
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -14,7 +14,15 @@ export class ProductService {
 
   // URL to web api
   private productUrl = 'http://localhost:5000/products';
-  constructor(private http: HttpClient) { }
+  products: { id: string; name: string; price: number; photo: string; }[];
+
+  constructor(private http: HttpClient) {
+    this.products = [
+      { id: '105', name: 'TV', price: 110000, photo: '' },
+      { id: '106', name: 'Mobile', price: 55000, photo: '.jpg' },
+      { id: '107', name: 'Laptop', price: 85000, photo: '.jpg' }
+    ];
+  }
 
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.productUrl);

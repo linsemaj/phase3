@@ -16,7 +16,6 @@ var GetProductById = (req, res) => {
 
 var StoreProductInfo = (req, res) => {
     let product = new ProductModel({
-        _id: req.body._id,
         pname: req.body.pname,
         details: req.body.details,
         image: req.body.image,
